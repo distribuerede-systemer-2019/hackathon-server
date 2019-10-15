@@ -3,7 +3,7 @@
 ## How to initialize
 1. Open your terminal (or git bash or whatever) and navigate to the folder you want to store your project in.
 2. Clone this project
-3. Open IntelliJ and import project with existing sources and maven. Remember to import maven. This can be done by clicking the pop’up and selecting `import`. Else you can right click the `pom.xml` file and select `maven` and `import`
+3. Open IntelliJ and import project with external model and maven. Remember to import maven. This can be done by clicking the pop’up and selecting `import`. Else you can right click the `pom.xml` file and select `maven` and `import`
 4. Add new configuration in the top of IntelliJ. Select `tomcat` → `local` and click `fix` in the bottom where you have a warning. 
 5. make a copy of `config.dist.json` called `config.json` and change the values to your database credentials.
 6. Open a connection to you MySQL database (can be done directly through the terminal, or Workbench or Sequel Pro ) and run the `init.sql` script which can be found in the resources folder.
