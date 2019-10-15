@@ -29,7 +29,11 @@ You are free to choose how the client talks to the server, options are sockets, 
 2- Balance: Integer
 3- AccountNumber: Integer 
 ​
-You can add more information as needed.  
+You can add more information as needed.
+
+- Find a way to implement support for multiple tellers accessing the same server at the same time. This should be implemented in all functions, where you might experience conflicts.
+
+Hint: look into the exercise regarding scalability.  
 
 ## How to initialize
 1. Open your terminal (or git bash or whatever) and navigate to the folder you want to store your project in.
@@ -45,11 +49,6 @@ You can add more information as needed.
 In IntelliJ you can select the TODO tab in the bottom (or search for TODO) which will list all the items, that you have to complete. 
 
 You can get inspiration from the already finished `getCustomers` which is done in both the database and the controller. 
-
-## Handle multiple tellers/clients
-Find a way to implement support for multiple tellers accessing the same server at the same time. This should be implemented in all functions, where you might experience conflicts.
-
-Hint: look into the exercise regarding scalability.  
 
 ## Client
 Next up is build you client, which can be found here <github-link>
