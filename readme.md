@@ -18,8 +18,6 @@ You can get inspiration from the already finished `getCustomers` which is done i
 ## Handle multiple tellers/clients
 Find a way to implement support for multiple tellers accessing the same server at the same time. This should be implemented in all functions, where you might experience conflicts.
 
-Remember to have scalability in mind as well. Imagine if a 1000 clients are working at the same branch. How will you make the system perform well?
-
 Hint: look into the exercise regarding scalability.  
 
 ## Client
