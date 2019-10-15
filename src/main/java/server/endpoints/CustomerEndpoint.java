@@ -15,8 +15,11 @@ public class CustomerEndpoint {
     @GET
     @Path("{id}")
     public Response getCustomer(@PathParam("id") int id){
-        //TODO complete this method
-        return null;
+        Customer customer = CustomerController.getCustomer(id);
+        String out = new Gson().toJson(customer);
+
+        // Return the users with the status code 200
+        return Response.status(200).type(MediaType.APPLICATION_JSON).entity(out).build();
     }
 
     @GET

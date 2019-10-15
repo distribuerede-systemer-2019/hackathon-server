@@ -2,6 +2,7 @@ package server.controllers;
 
 import server.models.Customer;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -10,8 +11,22 @@ public class CustomerController {
     private static DatabaseController dbCon;
 
     public static Customer getCustomer(int accountNo) {
-        //TODO implement this
-        return null;
+        if (dbCon == null) {
+            dbCon = new DatabaseController();
+        }
+        String sql = "SELECT * FROM customers WHERE account_no = ?";
+        PreparedStatement ps = dbCon.prepare(sql);
+        Customer customer = null;
+        try {
+            ps.setInt(1, accountNo);
+            ResultSet rs = dbCon. executePreparedStatement(ps);
+            rs.next();
+            customer = new Customer(rs.getString("name"), rs.getInt("balance"), rs.getInt("account_no"));
+        } catch (Exception e) {
+
+        }
+
+        return customer;
     }
 
     public static ArrayList<Customer> getCustomers() {

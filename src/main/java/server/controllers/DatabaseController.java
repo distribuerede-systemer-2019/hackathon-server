@@ -62,4 +62,33 @@ public class DatabaseController {
         // Return the resultset which at this point will be null if somethis went wrong
         return rs;
     }
+
+    public PreparedStatement prepare(String sql) {
+        if (connection == null)
+            connection = getConnection();
+        ResultSet rs = null;
+        try {
+            // Build the statement as a prepared statement
+            return connection.prepareStatement(sql);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public ResultSet executePreparedStatement(PreparedStatement ps) {
+    ResultSet rs = null;
+    try {
+        boolean retrievedSucessfully = ps.execute();
+        //check if successfull
+        if(retrievedSucessfully)
+            rs = ps.getResultSet();
+        else System.out.println("Something went wrong");
+    } catch (SQLException e) {
+        System.out.println(e.getMessage());
+    }
+    // Return the resultset which at this point will be null if somethis went wrong
+        return rs;
+    }
 }
