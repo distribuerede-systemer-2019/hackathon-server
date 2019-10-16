@@ -20,9 +20,9 @@ You are free to choose how the client talks to the server, options are sockets, 
 - The system should be persistent. The user accounts and balances should be preserved from session to session (Database, flat file, something). 
 - The system should be non SQL-injectable. (See the branch `prepared-statements`)
 - The customer account should at least have the following information: 
-  1- Name: String
-  2- Balance: Integer
-  3- AccountNumber: Integer 
+  - Name: String
+  - Balance: Integer
+  - AccountNumber: Integer 
 You can add more information as needed.
 
 ## How to initialize
