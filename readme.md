@@ -11,12 +11,10 @@ You are free to choose how the client talks to the server, options are sockets, 
 ## System Functionality
 ​
 - The tellers should be able to choose desired functionality from a menu.
-- The tellers should be able to create new user accounts. 
-- The tellers should be able to alter user account balances (withdraw/deposit).
-- The tellers should be able to transfer money from one account to another. 
+- The tellers should be able to create new customers and edit or delete existing customers. 
+- The tellers should be able to alter customer’s balances (withdraw/deposit).
 - The tellers should be able to list user accounts at branch.
 - The tellers should be able to query the balance on user account.
-- Multiple tellers should be able to access the system at the same time, from different computers.
 ​
 ## Non Functional Requirements
 ​
