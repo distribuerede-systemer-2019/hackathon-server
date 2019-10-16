@@ -21,6 +21,7 @@ You are free to choose how the client talks to the server, options are sockets, 
 - The system should operate as a client application on teller side, and a server application on the server side.
 - The system should provide an interactive interface for input (interactive command line, GUI, something).
 - The system should be persistent. The user accounts and balances should be preserved from session to session (Database, flat file, something). 
+- The system should be non SQL-injectable. (See the branch `prepared-statements`)
 - The customer account should at least have the following information: 
 ​
 1- Name: String
@@ -28,10 +29,6 @@ You are free to choose how the client talks to the server, options are sockets, 
 3- AccountNumber: Integer 
 ​
 You can add more information as needed.
-
-- Find a way to implement support for multiple tellers accessing the same server at the same time. This should be implemented in all functions, where you might experience conflicts.
-
-Hint: look into the exercise regarding scalability.  
 
 ## How to initialize
 1. Open your terminal (or git bash or whatever) and navigate to the folder you want to store your project in.
